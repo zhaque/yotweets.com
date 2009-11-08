@@ -1,0 +1,46 @@
+Table of Contents
+=================
+1 Getting started
+    1.1 Dependencies
+    1.2 Starting the Project
+
+1 Getting started
+~~~~~~~~~~~~~~~~~
+
+1.1 Dependencies
+~~~~~~~~~~~~~~~~~
+   Download all dependencies before proceeding to step 1, 
+   You will need the following programs:
+    - Python (2.5 or higher, 
+    but may work on earlier versions of Python)
+  - git,
+  - tar accepting "-j" option (any recent GNU tar),
+ 
+1.2 Starting the Project
+~~~~~~~~~~~~~~~~~
+  1. Create local_setting. Currently there is aleady a local_settings for sqlite in the repo. For example:
+echo "
+DATABASE_ENGINE = 'sqlite3'
+DATABASE_NAME = 'yotweets.db'
+DATABASE_USER = ''
+DATABASE_PASSWORD = ''
+DATABASE_HOST = ''
+DATABASE_PORT = ''
+
+CACHE_BACKEND = 'dummy:///'
+" > ./src/yotweets/local_settings.py
+
+  2. python ./bootstrap.py -c ./buildout.cfg # or production.cfg
+  3. ./bin/buildout -c ./buildout.cfg #or production.cfg
+  4. ./bin/main_site runserver 8001 # marketing site
+  5. ./bin/user_site runserver 8000 # user's site
+  
+  6. Create a new group 'Editors' for templates admin (http://example.com/admin/templates) and assign 'admin' user to the 'Editors' group.
+
+1.3 Deployment
+----------
+  1. It should be working copy, i.e. buildout have done.
+  2. export DJANGO_SETTINGS_MODULE=yotweets.settings # replace saaskit by your project name
+  3. ./bin/fab install_packages install_mail_transfer_agent log_setup github_config postgresql_setup webapp_setup install_project nginx_config apache2_config --fabfile=./src/saaskit/fabfile.py --user=root
+  4. After that you may exec any of this steps. But some of them have no reason, i.e. user setup.
+
