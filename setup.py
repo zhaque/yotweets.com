@@ -20,6 +20,7 @@ install_requires = [
         'Fabric',
         'PIL',
         'simplejson',
+        'saaskit-prepaid',
         
 ]
 
