@@ -1,0 +1,24 @@
+{% load compressed %}
+<html>
+	<head>
+		<title>{% block title %}{% endblock %}</title>
+		{% compressed_css 'all' %}
+		{% compressed_js 'all' %}
+		{% include "tasks/head.html" %}
+		{% block base_head %}{% endblock %}
+	</head>
+	<body style="padding:15px">
+		<div id="base-content">
+			{% include "tasks/status_bar.html" %}
+			{% if messages %}
+			<ul class="messages">
+				{% for message in messages %}
+				<li>{{ message }}</li>
+				{% endfor %}
+			</ul>
+			{% endif %}
+			{% block base_content %}
+			{% endblock %}
+		</div>
+	</body>
+</html>

@@ -73,6 +73,8 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'yotweets.urls'
 
+LOGIN_URL = '/twitter/login/'
+
 TEMPLATE_DIRS = ( os.path.join(PROJECT_ROOT, 'templates').replace('\\','/'), )
 
 TEST_RUNNER = "saaskit.tests.coverage_runner.run_tests"
@@ -126,9 +128,19 @@ COMPRESS = False
 COMPRESS_VERSION = False
 
 _default_css_files = (
-                      'uni_form/uni_form/uni-form-generic.css',
-                      'uni_form/uni_form/uni-form.css',
-                      )
+	'reset.css',
+	'jquery/css/jquery-ui-1.7.2.custom.css',
+	'uni_form/uni_form/uni-form-generic.css',
+	'uni_form/uni_form/uni-form.css',
+	'tasks/css/styles.css',
+	'tasks/css/ui.datepicker.css',
+)
+_default_js_files = (
+	'uni_form/uni_form/uni-form.jquery.js',
+	'jquery/jquery-1.3.2.min.js',
+	'jquery/jquery-ui-1.7.2.custom.min.js',
+	'jquery/jquery.form.js',
+)
 
 COMPRESS_CSS = {  
     'all' : {
@@ -138,9 +150,7 @@ COMPRESS_CSS = {
     }
 COMPRESS_JS = {
     'all' : {
-        'source_filenames' : (
-                              'uni_form/uni_form/uni-form.jquery.js',
-                              ),
+        'source_filenames' : _default_js_files,
         'output_filename' : 'scripts.js'},
     }
 
