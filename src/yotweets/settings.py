@@ -128,7 +128,7 @@ COMPRESS = False
 COMPRESS_VERSION = False
 
 _default_css_files = (
-	'reset.css',
+	'tasks/css/reset.css',
 	'uni_form/uni_form/uni-form-generic.css',
 	'uni_form/uni_form/uni-form.css',
 	'tasks/css/styles.css',
