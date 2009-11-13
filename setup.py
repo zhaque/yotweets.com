@@ -16,12 +16,14 @@ install_requires = [
         'app_media',
         'django-uni-form',
         'django-paypal',
+        'django-twitter-oauth',
+        'django-shorturls',
         'South',
         'Fabric',
         'PIL',
         'simplejson',
         'saaskit-prepaid',
-        
+        'django-tasks',
 ]
 
 extras_require = dict(
@@ -40,6 +42,8 @@ dependency_links = [
         'http://pypi.saaskit.org/South/',
         'http://pypi.saaskit.org/app-media/',
         'http://pypi.saaskit.org/django-paypal/',
+        'http://pypi.saaskit.org/django-twitter-oauth/',
+        'http://pypi.saaskit.org/django-shorturls/',
         'http://pypi.pinaxproject.com/',
 ]
 
