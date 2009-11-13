@@ -62,7 +62,7 @@ SECRET_KEY = '4el$t$n7z9+wb=g8yfwv6^1w_o1=$5n)98sgl7+qkz%&nd!as*'
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.load_template_source',
     'django.template.loaders.app_directories.load_template_source',
-#     'django.template.loaders.eggs.load_template_source',
+    'django.template.loaders.eggs.load_template_source',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -97,7 +97,10 @@ INSTALLED_APPS = (
 
     # local
     'simple_adsense',
-
+	'tasks',
+	'prepaid',
+	'shorturls',
+	'twitter_app',
 )
 # Settings for templates editing via django admin
 
@@ -158,6 +161,17 @@ PAYPAL_WPP_SIGNATURE = ""
 if PAYPAL_PRO:
 
     INSTALLED_APPS += ('paypal.standard', 'paypal.pro')
+	
+	
+# shorurls settings
+ROOT_URL = 'http://localhost:8000'
+SHORT_BASE_URL = 'http://localhost:8000'
+SHORTEN_FULL_BASE_URL = ROOT_URL + '/'
+SHORTEN_MODELS = {
+	't': 'tasks.task',
+	'a': 'tasks.advertisement',
+}
+
 
 # Local settings for development / production
 try:
