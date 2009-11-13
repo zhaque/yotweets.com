@@ -129,17 +129,17 @@ COMPRESS_VERSION = False
 
 _default_css_files = (
 	'reset.css',
-	'jquery/css/jquery-ui-1.7.2.custom.css',
 	'uni_form/uni_form/uni-form-generic.css',
 	'uni_form/uni_form/uni-form.css',
 	'tasks/css/styles.css',
 	'tasks/css/ui.datepicker.css',
+	'tasks/css/jquery-ui-1.7.2.custom.css',
 )
 _default_js_files = (
 	'uni_form/uni_form/uni-form.jquery.js',
-	'jquery/jquery-1.3.2.min.js',
-	'jquery/jquery-ui-1.7.2.custom.min.js',
-	'jquery/jquery.form.js',
+	'tasks/js/jquery-1.3.2.min.js',
+	'tasks/js/jquery-ui-1.7.2.custom.min.js',
+	'tasks/js/jquery.form.js',
 )
 
 COMPRESS_CSS = {  
