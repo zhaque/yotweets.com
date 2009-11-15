@@ -140,6 +140,8 @@ _default_js_files = (
 	'tasks/js/jquery-1.3.2.min.js',
 	'tasks/js/jquery-ui-1.7.2.custom.min.js',
 	'tasks/js/jquery.form.js',
+	'tasks/js/jquery.jtwitter.min.js',
+	'tasks/js/tasks.js',
 )
 
 COMPRESS_CSS = {  
