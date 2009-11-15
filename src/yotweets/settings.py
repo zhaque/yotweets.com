@@ -96,6 +96,8 @@ INSTALLED_APPS = (
     'templatesadmin',
     'app_media',
     'uni_form',
+	'oembed',
+	'tagging',
 
     # local
     'simple_adsense',
