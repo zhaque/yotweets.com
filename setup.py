@@ -25,6 +25,8 @@ install_requires = [
         'simplejson',
         'saaskit-prepaid',
         'django-tasks',
+		'django-oembed',
+		'django-tagging',
 ]
 
 extras_require = dict(
