@@ -176,15 +176,39 @@ if PAYPAL_PRO:
 
     INSTALLED_APPS += ('paypal.standard', 'paypal.pro')
 	
-	
+
+# twitter settings
+TWITTER_USERNAME = ''
+TWITTER_PASSWORD = ''
+
 # shorurls settings
 ROOT_URL = 'http://localhost:8000'
-SHORT_BASE_URL = 'http://localhost:8000'
+SHORT_BASE_URL = ROOT_URL + '/s/'
 SHORTEN_FULL_BASE_URL = ROOT_URL + '/'
+
 SHORTEN_MODELS = {
-	't': 'tasks.task',
 	'a': 'tasks.advertisement',
+	'c': 'tasks.classified',
+	'e': 'tasks.entry',
+	't': 'tasks.task',
 }
+
+# tasks settings
+SITE_TWEET_COST_FIXED = {
+	'advertisement':0,
+	'classified':0,
+	'feed':0,
+	'task':0,
+}
+SITE_TWEET_COST_VARIABLE = {
+	'advertisement':0,
+	'classified':0,
+	'feed':0,
+	'task':0,
+}
+
+# django tagging settings
+FORCE_LOWERCASE_TAGS = True
 
 
 # Local settings for development / production
