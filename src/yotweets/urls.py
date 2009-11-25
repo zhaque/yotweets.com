@@ -8,7 +8,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
 	(r'^tasks/', include('tasks.urls')),
-	
+        (r'^admin/templatesadmin/', include('templatesadmin.urls')),	
 	#(r'^mu/', include('muaccounts.urls')),
 	#(r'^create/$', 'muaccounts.views.create_account'),
 	

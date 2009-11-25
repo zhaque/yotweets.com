@@ -14,7 +14,6 @@ install_requires = [
         'django-perfect404',
         'django-templatesadmin',
         'app_media',
-        'django-uni-form',
         'django-paypal',
         'django-paypal-api',
         'django-twitter-oauth',
@@ -25,8 +24,9 @@ install_requires = [
         'simplejson',
         'saaskit-prepaid',
         'django-tasks',
-		'django-oembed',
-		'django-tagging',
+        'django-uni-form',
+	'django-oembed',
+	'django-tagging',
 ]
 
 extras_require = dict(
@@ -48,6 +48,7 @@ dependency_links = [
         'http://pypi.saaskit.org/django-paypal-api/',
         'http://pypi.saaskit.org/django-twitter-oauth/',
         'http://pypi.saaskit.org/django-shorturls/',
+        'http://pypi.saaskit.org/django-uni-form/', 
         'http://pypi.pinaxproject.com/',
 ]
 

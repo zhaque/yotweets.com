@@ -40,7 +40,7 @@ USE_I18N = True
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'site_media')
+MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
 APP_MEDIA_ROOT = MEDIA_ROOT
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
@@ -141,7 +141,7 @@ _default_css_files = (
 	'tasks/css/reset.css',
 	'uni_form/uni_form/uni-form-generic.css',
 	'uni_form/uni_form/uni-form.css',
-	'tasks/css/styles.css',
+	'tasks/css/tasks.css',
 	'tasks/css/ui.datepicker.css',
 	'tasks/css/jquery-ui-1.7.2.custom.css',
 )
