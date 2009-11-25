@@ -126,6 +126,14 @@ TEMPLATESADMIN_TEMPLATE_DIRS = (
       ( os.path.join(PROJECT_ROOT, 'templates'), )
    )
 
+TEMPLATE_CONTEXT_PROCESSORS = (
+	'django.core.context_processors.auth',
+	'django.core.context_processors.debug',
+	'django.core.context_processors.i18n',
+	'django.core.context_processors.media',
+	'django.core.context_processors.request',
+)
+
 COMPRESS = False
 COMPRESS_VERSION = False
 
@@ -138,12 +146,12 @@ _default_css_files = (
 	'tasks/css/jquery-ui-1.7.2.custom.css',
 )
 _default_js_files = (
-	'uni_form/uni_form/uni-form.jquery.js',
 	'tasks/js/jquery-1.3.2.min.js',
 	'tasks/js/jquery-ui-1.7.2.custom.min.js',
 	'tasks/js/jquery.form.js',
 	'tasks/js/jquery.jtwitter.min.js',
 	'tasks/js/tasks.js',
+	'uni_form/uni_form/uni-form.jquery.js',
 )
 
 COMPRESS_CSS = {  
